@@ -210,8 +210,10 @@ nav {
 }
 
 .card-item {
-    width: 250px;
+    max-width: 250px;
     margin-top: 40px;
+    width: 100%;
+    position: relative;
 }
 
 .card-item img {
@@ -221,6 +223,8 @@ nav {
 .card-item>.primary-description {
     width: 250px;
 }
+
+
 
 .card-item img:hover {}
 
@@ -529,7 +533,8 @@ nav {
     }
 
     .online-game-container {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
     }
 
     .card-item {
