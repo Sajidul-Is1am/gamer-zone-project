@@ -12,7 +12,6 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
-/* common part end */
 .primary-btn {
     padding: 20px 40px;
     background: #FF42A5;
@@ -31,25 +30,31 @@ body {
     line-height: 25px;
     /* 166.667% */
 }
-
+.liniear-color {
+    background: -webkit-linear-gradient(#F948B2, #8758F1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.cmn-pink {
+    color: rgb(222, 46, 172);
+}
+/* common part end */
 /* header part start */
-header {}
-
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 34px 240px;
+    padding: 34px 200px;
     background: #FFF;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
     align-items: center;
 }
 
-.manu ul {
+.manu {
     display: flex;
     list-style: none;
 }
 
-.manu ul li {
+.manu li {
     margin-left: 34px;
     padding: 7px 7px;
 }
@@ -66,11 +71,10 @@ nav {
     color: #0B0223;
 }
 
-.nav-title>span {
-    color: rgb(222, 46, 172);
+.manu li{
+    transition: 0.5s;
 }
-
-.manu .last-follow {
+.manu li:hover, .last-follow {
     background: rgba(11, 2, 35, 0.10);
     border-radius: 5px;
 }
@@ -89,31 +93,22 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 240px;
+    margin: 0 200px;
     gap: 100px;
-    height: 70vh;
 }
 
-.banner-section {
-    background: url(../images/Group\ 14.png);
-    background-position: bottom left;
-    background-repeat: no-repeat;
-}
 
 .banner-content {}
 
 .banner-title {
     color: #0B0223;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 600;
     text-transform: uppercase;
 }
 
 .goat {
     font-size: 6rem;
-    background: -webkit-linear-gradient(#F948B2, #8758F1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .banner-content li {
@@ -159,11 +154,8 @@ nav {
 .team-content{
     text-align: end;
 }
-.team-content .team-title {
+.team-title{
     font-size: 3rem;
-    background: -webkit-linear-gradient(#F948B2, #8758F1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 .team-p-mr{
     margin: 20px 0;
@@ -172,6 +164,7 @@ nav {
     font-size: 2em;
     font-weight: 700;
     color: #000000;
+    margin: 25px 0;
 }
 .team-last-purpose > span{
     font-size: 1.1rem;
@@ -188,12 +181,24 @@ nav {
 .online-game-section{
     padding: 20px 200px;
     text-align: center;
+    margin: 100px 0;
+}
+.online-title{
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+.card-item{
+    width: 250px;
+    margin-top: 40px;
 }
 .card-item img{
     width: 250px;
 }
+.card-item > .primary-description{
+    width: 250px;
+}
 .card-item img:hover{
-    transform: ;
+    
 }
 /* online game part end */
 
@@ -202,21 +207,225 @@ nav {
 .ad-container{
     display: flex;
     padding: 30px 200px;
-    gap: 30px;
+    gap: 250px;
     align-items: center;
     justify-content: space-between;
 }
-.main-img{
+.main-img img{
+    width: 400px;
+    height: 500px;
+}
+.main-img {
     position: relative;
 }
-.small-img {
+.small-img img{
     position: absolute;
+    width: 250px;
+    height: 300px;
+    left: -30%;
     bottom: -15%;
-    right: 75%;
+}
+.ad-content {
+    width: 350px;
+    margin-left: 120px;
+}
+.ad-content h2{
+    font-size: 2.5rem;
 }
 /* add part end */
 
+/* game-item part start */
+.game-item-section{
+    margin: 100px 0;
+}
+.game-container{
+    padding: 120px 200px;
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.game-item a:hover{
+   border: 1px solid pink;
+   border-radius: 50px;
+}
+.game-item a{
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all linear 0.4s;
+}
+
+.game-item img{
+    width: 40px;
+    height: 40px;
+    margin-right: 3px;
+}
+/* game-item part end */
 
 
 
+
+
+
+
+
+
+/* medea queary responsive */
+/* mobile responsive */
+@media screen and (max-width:560px) {
+    nav{
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .manu{
+        flex-direction: column;
+    }
+    .banner-container {
+        flex-direction: column-reverse;
+        margin: 0 50px;
+    }
+    .banner-img img{
+        width: 350px;
+    }
+    .team-container {
+        flex-direction: column;
+        padding: 30px 30px;
+    }
+    .team-img img{
+        width: 400px;
+    }
+    .team-content {
+        text-align: center;
+    }
+    .online-game-section {
+        padding: 20px 30px;
+    }
+    .online-game-container {
+        flex-direction: column;
+    }
+    .card-item{
+        margin: 0 auto;
+    }
+    .ad-container {
+        flex-direction: column;
+        padding: 30px 50px;
+        gap: 70px;
+    }
+    .ad-content {
+        margin-left: 20px;
+    }
+    .main-img img {
+        width: 290px;
+        height: 350px;
+    }
+    .small-img img{
+        width: 180px;
+        height: 220px;
+        margin-left: 50px;
+    }
+    .game-container{
+        display: grid;
+        gap: 7px;
+        grid-template-columns: repeat(3,1fr);
+        padding: 100px 10px;
+
+    }
+    .game-item img{
+        width: 28px;
+        height: 28px;
+    }
+    .game-item a{
+        padding: 3px;
+    }
+    .game-item span{
+        font-size: 14px;
+    }
+    
+}
+
+
+/* tabled mode responsive start */
+@media screen and (min-width:560px) and (max-width:960px) {
+    nav{
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .manu{
+        flex-direction: column;
+    }
+    .banner-container {
+        flex-direction: column-reverse;
+        margin: 0 50px;
+    }
+    .banner-img img{
+        width: 350px;
+    }
+    .team-container {
+        flex-direction: column;
+        padding: 30px 30px;
+    }
+    .team-img img{
+        width: 400px;
+    }
+    .team-content {
+        text-align: center;
+    }
+    .online-game-section {
+        padding: 20px 30px;
+    }
+    .online-game-container {
+        flex-direction: column;
+    }
+    .card-item{
+        margin: 20px auto;
+    }
+    .ad-container {
+        flex-direction: column;
+        padding: 30px 50px;
+        gap: 70px;
+    }
+    .ad-content {
+        
+    }
+    .ad-content {
+        margin-left: 20px;
+        width: 450px;
+        margin-left: 120px;
+    }
+    .main-img img {
+        width: 390px;
+        height: 450px;
+    }
+    .small-img img{
+        width: 180px;
+        height: 220px;
+        margin-left: 50px;
+    }
+    .game-container{
+        display: grid;
+        row-gap: 50px;
+        grid-template-columns: repeat(3,1fr);
+        padding: 100px 10px;
+
+    }
+    .game-item img{
+        width: 28px;
+        height: 28px;
+    }
+    .game-item a{
+        padding: 3px;
+    }
+    .game-item span{
+        font-size: 14px;
+    }
+    
+}
+/* tabled mode responsive end */
 
