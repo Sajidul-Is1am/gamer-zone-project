@@ -111,8 +111,13 @@ nav {
     gap: 100px;
 }
 
+.banner-section{
+    background:url(../images/Group\ 14.png);
+    background-size: 50%;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
 
-.banner-content {}
 
 .banner-title {
     color: #0B0223;
