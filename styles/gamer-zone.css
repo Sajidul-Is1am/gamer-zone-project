@@ -179,6 +179,43 @@ nav {
     color: #534C64;
 }
 
+/* online game part start */
+.online-game-container{
+    display: flex;
+    gap: 24px;
+    justify-content: space-around;
+}
+.online-game-section{
+    padding: 20px 200px;
+    text-align: center;
+}
+.card-item img{
+    width: 250px;
+}
+.card-item img:hover{
+    transform: ;
+}
+/* online game part end */
+
+
+/* add part start */
+.ad-container{
+    display: flex;
+    padding: 30px 200px;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-img{
+    position: relative;
+}
+.small-img {
+    position: absolute;
+    bottom: -15%;
+    right: 75%;
+}
+/* add part end */
+
 
 
 
