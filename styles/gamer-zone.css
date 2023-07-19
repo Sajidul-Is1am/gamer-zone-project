@@ -405,7 +405,9 @@ nav {
         flex-direction: column-reverse;
         margin: 0 50px;
     }
-
+    .banner-section{
+        background-image: none;
+    }
     .banner-img img {
         width: 350px;
     }
@@ -519,7 +521,9 @@ nav {
     .banner-img img {
         width: 450px;
     }
-
+    .banner-section{
+        background-image: none;
+    }
     .team-container {
         flex-direction: column;
         padding: 30px 30px;
