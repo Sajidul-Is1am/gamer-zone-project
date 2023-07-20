@@ -111,8 +111,8 @@ nav {
     gap: 100px;
 }
 
-.banner-section{
-    background:url(../images/Group\ 14.png);
+.banner-section {
+    background: url(../images/Group\ 14.png);
     background-size: 50%;
     background-position: bottom left;
     background-repeat: no-repeat;
@@ -196,42 +196,73 @@ nav {
     color: #534C64;
 }
 
-/* online game part start */
-.online-game-container {
-    display: flex;
-    gap: 24px;
-    justify-content: space-around;
-}
 
+/* online game part start */
 .online-game-section {
     padding: 20px 200px;
     text-align: center;
     margin: 100px 0;
 }
 
+.main-container-item {
+    display: flex;
+    gap: 24px;
+}
+
 .online-title {
     font-size: 3rem;
-    margin-bottom: 15px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-.card-item {
-    max-width: 250px;
-    margin-top: 40px;
-    width: 100%;
+.online-game-section>.primary-description {
+    margin-bottom: 40px;
+}
+
+.item-box {
     position: relative;
+    width: 50%;
 }
 
-.card-item img {
-    width: 250px;
+.online-item-img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    margin: 20px 0;
 }
 
-.card-item>.primary-description {
-    width: 250px;
+.play-icon {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 25px 0;
+}
+.play-icon i{
+    font-size: 50px;
+}
+.watch-now{
+    color: #F948B2;
+}
+.item-box:hover .online-item-img {
+    opacity: 0.2;
 }
 
+.item-box:hover .play-icon {
+    opacity: 1;
+}
 
-
-.card-item img:hover {}
+.overlay-online-text {
+    color: white;
+    font-size: 16px;
+}
 
 /* online game part end */
 
@@ -330,43 +361,53 @@ nav {
     justify-content: center;
     align-items: center;
 }
-.footer-title{
+
+.footer-title {
     font-size: 2.75rem;
     margin-left: 20px;
 }
+
 .about-manu {
     display: flex;
     gap: 60px;
     margin: 56px 0;
 }
-.about-manu li a{
+
+.about-manu li a {
     font-size: 1rem;
     font-weight: 600;
     color: #FFF;
 }
+
 .social-link {
     display: flex;
     gap: 40px;
 }
-.social-link li a i{
+
+.social-link li a i {
     color: #FFF;
 }
-.social-link li a .red{
+
+.social-link li a .red {
     color: red;
 }
-.social-link li a .blue{
+
+.social-link li a .blue {
     color: blue;
 }
+
 .security-footer {
     display: flex;
     gap: 60px;
     margin: 56px 0;
 }
-.security-footer li a{
+
+.security-footer li a {
     font-size: 1rem;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.60);
 }
+
 .copy-right-footer {
     color: rgba(255, 255, 255, 0.60);
     text-align: center;
@@ -394,9 +435,11 @@ nav {
         text-align: center;
         padding: 30px 20px;
     }
-    .manu li{
+
+    .manu li {
         margin: 17px 0;
     }
+
     .manu {
         flex-direction: column;
     }
@@ -404,14 +447,32 @@ nav {
     .banner-container {
         flex-direction: column-reverse;
         margin: 0 50px;
+        gap: 65px;
     }
-    .banner-section{
+
+    .banner-section {
         background-image: none;
+        margin-bottom: 35px;
     }
+
     .banner-img img {
         width: 350px;
     }
+    .banner-title {
+        font-size: 2rem;
+    }
+    .goat {
+        font-size: 4rem;
+    }
+    .banner-content li {
+        font-size: 1rem;
+    }
+    .primary-btn {
+        font-size: 0.8rem;
+    }
+    /* banner part end */
 
+        /* team part start */
     .team-container {
         flex-direction: column;
         padding: 30px 30px;
@@ -424,25 +485,58 @@ nav {
     .team-content {
         text-align: center;
     }
+    .team-title {
+        font-size: 2em;
+    }
+    .primary-description {
+        color: #534C64;
+        font-size: 0.8rem;
+        font-weight: 400;
+        line-height: 25px;
+    }
+    .team-last-purpose {
+        font-size: 1.7rem;
+    }
+    /* team part end */
+
+
+    /* online part start */
 
     .online-game-section {
         padding: 20px 30px;
+        margin: 60px 0;
     }
 
-    .online-game-container {
+    .main-container-item {
         flex-direction: column;
+        justify-content: center;
+    }
+    .online-title {
+        font-size: 2rem;
+    }
+    .item-box {
+        width: 100%;
     }
 
     .card-item {
         margin: 0 auto;
     }
 
+    .play-icon {
+        top: 40%;
+    }
+
+    /* online part end */
+
+    /* ad part start */
     .ad-container {
         flex-direction: column;
         padding: 30px 50px;
         gap: 70px;
     }
-
+    .ad-content h2 {
+        font-size: 2rem;
+    }
     .ad-content {
         margin-left: 20px;
     }
@@ -458,11 +552,14 @@ nav {
         margin-left: 50px;
     }
 
+    /* ad part end */
+
+    /* game item part start */
     .game-container {
         display: grid;
         gap: 7px;
         grid-template-columns: repeat(3, 1fr);
-        padding: 100px 10px;
+        padding: 50px 20px;
 
     }
 
@@ -478,24 +575,44 @@ nav {
     .game-item span {
         font-size: 14px;
     }
-    .about-manu{
+    
+    /* game item part end */
+
+    /*footer part start  */
+    .about-manu {
         display: grid;
-        grid-template-columns: repeat(3 , 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
-    .social-link{
+
+    .social-link {
         display: grid;
-        grid-template-columns: repeat(3 , 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
-    .security-footer{
+
+    .security-footer {
         display: grid;
-        grid-template-columns: repeat(2 , 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
+
     .footer-section {
         padding: 70px 100px;
     }
-    .footer-section,.security-footer,.social-link,.about-manu{
+
+    .footer-section,
+    .security-footer,
+    .social-link,
+    .about-manu {
         align-items: center;
     }
+    .footer-brand img {
+        height: 30px;
+        width: 50px;
+    }
+    .footer-title {
+        font-size: 2rem;
+        margin-left: 10px;
+    }
+    /* footer part end */
 }
 
 
@@ -510,9 +627,11 @@ nav {
     .manu {
         flex-direction: column;
     }
-    .manu li{
+
+    .manu li {
         margin: 20px 0;
     }
+
     .banner-container {
         flex-direction: column-reverse;
         margin: 0 50px;
@@ -521,9 +640,23 @@ nav {
     .banner-img img {
         width: 450px;
     }
-    .banner-section{
-        background-image: none;
+    .banner-title {
+        font-size: 2.25rem;
     }
+    .goat {
+        font-size: 5rem;
+    }
+    .banner-content li {
+        font-size: 1.15rem;
+    }
+    .primary-btn {
+        font-size: 0.8rem;
+    }
+    .banner-section {
+        background-image: none;
+        margin-bottom: 35px;
+    }
+
     .team-container {
         flex-direction: column;
         padding: 30px 30px;
@@ -536,20 +669,37 @@ nav {
     .team-content {
         text-align: center;
     }
-
+    .team-p-mr {
+        margin: 20px 30px;
+    }
+    /* online part start */
     .online-game-section {
-        padding: 20px 30px;
+        padding: 20px 70px;
     }
 
-    .online-game-container {
+    .main-container-item {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .online-title {
+        font-size: 2.5rem;
+    }
+    .primary-description {
+        font-size: 1.05rem;
+    }
+    .item-box {
+        width: 100%;
     }
 
     .card-item {
-        margin: 20px auto;
+        margin: 0 auto;
     }
 
+    .play-icon {
+        top: 40%;
+    }
+
+    /* online part end */
     .ad-container {
         flex-direction: column;
         padding: 30px 50px;
@@ -579,7 +729,7 @@ nav {
         display: grid;
         row-gap: 50px;
         grid-template-columns: repeat(3, 1fr);
-        padding: 100px 10px;
+        padding: 70px 70px;
 
     }
 
@@ -595,23 +745,31 @@ nav {
     .game-item span {
         font-size: 14px;
     }
+
     .footer-section {
         padding: 70px 200px;
     }
-    .about-manu{
+
+    .about-manu {
         display: grid;
-        grid-template-columns: repeat(3 , 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
-    .social-link{
+
+    .social-link {
         display: grid;
-        grid-template-columns: repeat(6 , 1fr);
-    
+        grid-template-columns: repeat(6, 1fr);
+
     }
-    .security-footer{
+
+    .security-footer {
         display: grid;
-        grid-template-columns: repeat(2 , 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-    .footer-section,.security-footer,.social-link,.about-manu{
+
+    .footer-section,
+    .security-footer,
+    .social-link,
+    .about-manu {
         align-items: center;
     }
 }
